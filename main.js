@@ -25,7 +25,6 @@ var $form = document.querySelector('form');
 $form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
-  console.log('functionw orks!');
   event.preventDefault();
   var day = $form.elements.day.value;
   var time = $form.elements.time.value;
@@ -38,5 +37,5 @@ function handleSubmit(event) {
   };
   data.nextEntryId++;
   data.entries.unshift(entryData);
-  console.log('entry-data: ', entryData);
+  $form.reset();
 }

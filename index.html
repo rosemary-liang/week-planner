@@ -41,7 +41,41 @@
   </div>
   <div class="container">
     <h1>Weekly Planner</h1>
+    <div class="row">
+      <div class="weekdays">
+        <button class="days">Sunday</button>
+        <button class="days">Monday</button>
+        <button class="days">Tuesday</button>
+        <button class="days">Wednesday</button>
+        <button class="days">Thursday</button>
+        <button class="days">Friday</button>
+        <button class="days">Saturday</button>
+      </div>
+    </div>
     <button class="open">Add Entry</button>
+    <div class="row">
+      <div class="schedule">
+        <h3 class="text-center">Scheduled Events for <span class="today"></span></h3>
+        <table id="customers">
+          <thead>
+            <tr>
+              <th scope="col" class="t-time">Time</th>
+              <th scope="col" class="t-desc">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10:00 am</td>
+              <td>practice algorothims</td>
+            </tr>
+            <tr>
+              <td>10:00 am</td>
+              <td>practice algorothims</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
   <script src="data.js"></script>
