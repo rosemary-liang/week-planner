@@ -1,0 +1,31 @@
+* {
+  font-family: "comic neue", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.open {
+  border: 2px solid black;
+  padding: 0.5rem 3rem;
+  box-shadow: 3px 3px 0 1px black;
+  cursor: pointer;
+  margin-top: 10rem;
+}
+
+.open:hover {
+  background-color: #89a6fb;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000091;
+  min-height: 100vh;
+  z-index: 3;
+}
