@@ -10,11 +10,12 @@
     rel="stylesheet">
 </head>
 <body>
-  <div class="box">
-    <div class="modal">
-      <h2>Add Entry</h2>
+  <div class="modal">
+    <div class="modal-content">
+      <div class="title">
+        <h2>Add Entry</h2>
+      </div>
       <div class="row">
-        <label for="day-of-week">Choose a date:</label>
         <select name="day" id="day-of-week">
           <option value="">Day of Week</option>
           <option value="Monday">Monday</option>
@@ -25,31 +26,25 @@
           <option value="Saturday">Saturday</option>
           <option value="Sunday">Sunday</option>
         </select>
+
+        <input type="time" id="time" name="time" >
       </div>
 
       <div class="row">
-        <label for="time">Time</label>
-        <input type="time" id="time" name="time">
-        <!-- <input type="submit"> -->
+        <textarea id="description" name="desc" rows="4" cols="50" placeholder="Description" ></textarea>
       </div>
 
-      <div>
-        <textarea id="description" name="desc" rows="4" cols="50" placeholder="Description"></textarea>
+      <div class="submit-button">
+        <button class="submit">submit</button>
       </div>
-
-      <button class="submit">submit</button>
-
+    </div>
   </div>
   <div class="container">
-    <!-- <div class="row"> -->
-      <h1>Weekly Planner</h1>
-    <!-- </div> -->
-    <!-- <div  class="row "> -->
-      <button class="open">Add Entry</button>
-    <!-- </div> -->
+    <h1>Weekly Planner</h1>
+    <button class="open">Add Entry</button>
   </div>
 
-  </div>
+
   <script src="main.js"></script>
 </body>
 </html>

@@ -9,6 +9,15 @@
   justify-content: center;
 }
 
+.row {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+#time {
+  margin-left: 1rem;
+}
+
 .open {
   border: 2px solid black;
   padding: 0.5rem 3rem;
@@ -27,5 +36,37 @@
   justify-content: center;
   background-color: #00000091;
   min-height: 100vh;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 1rem;
+  position: absolute;
   z-index: 3;
+}
+
+h2 {
+  text-align: center;
+}
+
+.submit {
+  border: 2px solid black;
+  padding: 0.1rem 0.8rem;
+  box-shadow: 2px 2px 0 1px black;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#description {
+  height: 100px;
+  resize: none;
 }
