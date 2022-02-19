@@ -74,3 +74,11 @@ window.addEventListener('DOMContentLoaded', function (event) {
     $tbody.append(renderEntry(data.entries[i]));
   }
 });
+
+var $today = document.querySelector('.today');
+var $weekdays = document.querySelector('.weekdays');
+
+$weekdays.addEventListener('click', dayUpdate);
+function dayUpdate(event) {
+  $today.textContent = event.target.textContent;
+}
