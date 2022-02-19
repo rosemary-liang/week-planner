@@ -129,8 +129,7 @@ table td:last-child {
 #customers tr:hover { background-color: #ddd; }
 
 #customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 0.1rem;
   text-align: left;
   background-color: lightgray;
   color: black;

@@ -1,3 +1,6 @@
+/* global data */
+/* exported data */
+
 var $open = document.querySelector('.open');
 var $popup = document.querySelector('.modal');
 var $submit = document.querySelector('.submit');
@@ -37,5 +40,37 @@ function handleSubmit(event) {
   };
   data.nextEntryId++;
   data.entries.unshift(entryData);
+  $tbody.prepend(renderEntry(entryData));
+
   $form.reset();
 }
+
+var $tbody = document.querySelector('tbody');
+
+function renderEntry(entry) {
+  var tr = document.createElement('tr');
+  // $tbody.appendChild(tr);
+
+  var tdTime = document.createElement('td');
+  tdTime.setAttribute('class', 'time');
+  tdTime.textContent = entry.time;
+  tr.appendChild(tdTime);
+
+  var tdDescription = document.createElement('td');
+  tdDescription.setAttribute('class', 'description');
+  tdDescription.textContent = entry.desc;
+  tr.appendChild(tdDescription);
+
+  var entryId = entry.entryId;
+  tr.setAttribute('data-entry-id', entryId);
+  entryId++;
+
+  return tr;
+}
+
+// append entries
+window.addEventListener('DOMContentLoaded', function (event) {
+  for (var i = 0; i < data.entries.length; i++) {
+    $tbody.append(renderEntry(data.entries[i]));
+  }
+});
