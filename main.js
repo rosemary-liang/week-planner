@@ -4,6 +4,7 @@
 var $open = document.querySelector('.open');
 var $popup = document.querySelector('.modal');
 var $submit = document.querySelector('.submit');
+var $trs = document.querySelectorAll('tr');
 
 $open.addEventListener('click', openModal);
 $submit.addEventListener('click', closeModal);
@@ -49,6 +50,8 @@ var $tbody = document.querySelector('tbody');
 
 function renderEntry(entry) {
   var tr = document.createElement('tr');
+  tr.setAttribute('data-view', entry.day);
+  tr.setAttribute('class', 'hidden');
   // $tbody.appendChild(tr);
 
   var tdTime = document.createElement('td');
@@ -78,7 +81,13 @@ window.addEventListener('DOMContentLoaded', function (event) {
 var $today = document.querySelector('.today');
 var $weekdays = document.querySelector('.weekdays');
 
+// here we are!
 $weekdays.addEventListener('click', dayUpdate);
 function dayUpdate(event) {
   $today.textContent = event.target.textContent;
+  for (var i = 0; i < $trs.length; i++) {
+    if (event.target.textContent === $trs[i].day) {
+      $trs[i].className = 'vis';
+    }
+  }
 }
